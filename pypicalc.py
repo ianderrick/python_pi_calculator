@@ -9,19 +9,19 @@ def calculate_pi(n):
     return 4 * pi
 
 def measure_performance(n):
-    # Record start time and initial memory usage
+# Record start time and initial memory usage
     start_time = time.time()
     process = psutil.Process(os.getpid())
     initial_memory = process.memory_info().rss
 
-    # Calculate pi
+# Calculate pi
     pi = calculate_pi(n)
 
-    # Record end time and final memory usage
+# Record end time and final memory usage
     end_time = time.time()
     final_memory = process.memory_info().rss
 
-    # Calculate elapsed time and memory usage
+# Calculate elapsed time and memory usage
     elapsed_time = end_time - start_time
     memory_usage = final_memory - initial_memory
 
